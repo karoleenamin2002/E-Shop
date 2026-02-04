@@ -65,7 +65,7 @@ function apiRequest() {
         if (request.readyState == 4 && request.status == 200) {
           requestData = JSON.parse(request.response);
           localStorage.setItem("categories", JSON.stringify(requestData));
-          displayCategories(requestData.categories.slice(0,4))
+          displayCategories(requestData.slice(0, 4));
         }
       };
       categories = JSON.parse(localStorage.getItem("categories")) || [];
