@@ -1,31 +1,28 @@
-let logInLink = document.querySelector(".log-in")
-let logOutLink = document.querySelector(".log-out")
-var loggedIn = JSON.parse(localStorage.getItem("LoggedIn"))
+let logInLink = document.querySelector(".log-in");
+let logOutLink = document.querySelector(".log-out");
+var loggedIn = JSON.parse(localStorage.getItem("LoggedIn"));
 
-var userName = localStorage.getItem("UserName")
+var userName = localStorage.getItem("UserName");
 if (loggedIn) {
-    logInLink.style.display = "none"
-    document.querySelector(".user-name").innerHTML = userName
-}
-else{
-    logOutLink.style.display = "none"
-    localStorage.setItem("counter", 0);
-    localStorage.setItem("LoggedIn", false);
-    localStorage.setItem("UserName", "user");
-    products=localStorage.getItem("products");
+  logInLink.style.display = "none";
+  document.querySelector(".user-name").innerHTML = userName;
+} else {
+  logOutLink.style.display = "none";
+  localStorage.setItem("counter", 0);
+  localStorage.setItem("LoggedIn", false);
+  localStorage.setItem("UserName", "user");
+  products = localStorage.getItem("products");
 
-    for (let i = 1; i <= products.length; i++) {
-            localStorage.setItem(i, 0);
-    }
-    for (let i = 1; i <= products.length; i++) {
-            localStorage.setItem(`wish-${i}`, 0);
-    }
-    localStorage.setItem("totalprice", 0);
-    localStorage.setItem("w-counter", 0);
-   
-
+  for (let i = 1; i <= products.length; i++) {
+    localStorage.setItem(i, 0);
+  }
+  for (let i = 1; i <= products.length; i++) {
+    localStorage.setItem(`wish-${i}`, 0);
+  }
+  localStorage.setItem("totalprice", 0);
+  localStorage.setItem("w-counter", 0);
 }
-document.getElementById("cartCounter").innerHTML=getloc("counter");
+document.getElementById("cartCounter").innerHTML = getloc("counter");
 var container = document.getElementById("container");
 const searchInput = document.getElementById("searchInput");
 var products;
@@ -35,7 +32,8 @@ xhr.send();
 xhr.onreadystatechange = function () {
   if (xhr.readyState == 4 && xhr.status == 200) {
     products = JSON.parse(xhr.responseText);
-    products=products.products;
+    products = products.products;
+    console.log(products);
 
     //display products
     function displayProducts(arr) {
@@ -88,25 +86,25 @@ xhr.onreadystatechange = function () {
     var category = params.get("category");
 
     let filteredProducts = products;
-   var pageTitle = document.getElementById("pageTitle");
+    var pageTitle = document.getElementById("pageTitle");
 
-pageTitle.style.backgroundImage =
-  "linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/head.jpg')";
+    pageTitle.style.backgroundImage =
+      "linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/head.jpg')";
 
-pageTitle.style.backgroundRepeat = "no-repeat";
-pageTitle.style.backgroundSize = "cover";
-pageTitle.style.backgroundPosition = "center";
+    pageTitle.style.backgroundRepeat = "no-repeat";
+    pageTitle.style.backgroundSize = "cover";
+    pageTitle.style.backgroundPosition = "center";
 
-pageTitle.style.padding = "20px";
-pageTitle.style.margin = "25px";
-pageTitle.style.borderRadius = "15px";
-pageTitle.style.height = "200px";
+    pageTitle.style.padding = "20px";
+    pageTitle.style.margin = "25px";
+    pageTitle.style.borderRadius = "15px";
+    pageTitle.style.height = "200px";
 
-pageTitle.style.color = "white";
-pageTitle.style.display = "flex";
-pageTitle.style.alignItems = "center"; 
-pageTitle.style.justifyContent = "flex-start"; 
-pageTitle.style.padding = "20px 20px 20px 100px";
+    pageTitle.style.color = "white";
+    pageTitle.style.display = "flex";
+    pageTitle.style.alignItems = "center";
+    pageTitle.style.justifyContent = "flex-start";
+    pageTitle.style.padding = "20px 20px 20px 100px";
 
     if (category) {
       pageTitle.innerText =
@@ -121,25 +119,23 @@ pageTitle.style.padding = "20px 20px 20px 100px";
 
 //href("products.html?id=5")
 function getloc(key) {
-    return parseInt(localStorage.getItem(key)) || 0;
+  return parseInt(localStorage.getItem(key)) || 0;
 }
-logOutLink.addEventListener("click",function(e){
-e.preventDefault()
+logOutLink.addEventListener("click", function (e) {
+  e.preventDefault();
 
+  localStorage.setItem("counter", 0);
+  localStorage.setItem("LoggedIn", false);
+  localStorage.setItem("UserName", "user");
 
-    localStorage.setItem("counter", 0);
-    localStorage.setItem("LoggedIn", false);
-    localStorage.setItem("UserName", "user");
+  for (let i = 1; i <= products.length; i++) {
+    localStorage.setItem(i, 0);
+  }
+  for (let i = 1; i <= products.length; i++) {
+    localStorage.setItem(`wish-${i}`, 0);
+  }
+  localStorage.setItem("totalprice", 0);
+  localStorage.setItem("w-counter", 0);
 
-
-    for (let i = 1; i <= products.length; i++) {
-            localStorage.setItem(i, 0);
-    }
-    for (let i = 1; i <= products.length; i++) {
-            localStorage.setItem(`wish-${i}`, 0);
-    }
-    localStorage.setItem("totalprice", 0);
-    localStorage.setItem("w-counter", 0);
-    
-    location.href = "./login.html"
-})
+  location.href = "./login.html";
+});
