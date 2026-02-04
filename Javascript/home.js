@@ -23,7 +23,7 @@ let categoriesImages = [
 var requestData = [];
 var productsData = [];
 var products = JSON.parse(localStorage.getItem("products")) || [];
-var categories = JSON.parse(localStorage.getItem("categories"));
+var categories = JSON.parse(localStorage.getItem("categories")) || [];
 var counter = JSON.parse(localStorage.getItem("counter")) || 0;
 var userName = localStorage.getItem("UserName");
 
@@ -65,9 +65,12 @@ function apiRequest() {
         if (request.readyState == 4 && request.status == 200) {
           requestData = JSON.parse(request.response);
           localStorage.setItem("categories", JSON.stringify(requestData));
+          displayCategories(requestData.categories.slice(0,4))
         }
       };
-      categories = JSON.parse(localStorage.getItem("categories"));
+      categories = JSON.parse(localStorage.getItem("categories")) || [];
+      console.log(categories);
+
       displayCategories(categories.slice(0, 4));
     } else {
       displayCategories(categories.slice(0, 4));
@@ -102,10 +105,12 @@ function getProducts() {
         if (request.readyState == 4 && request.status == 200) {
           productsData = JSON.parse(request.response);
           localStorage.setItem("products", JSON.stringify(productsData));
-          // displayProducts(productsData.products)
+          console.log(productsData);
+
+          displayProducts(productsData.products);
         }
       };
-      products = JSON.parse(localStorage.getItem("products"));
+      products = JSON.parse(localStorage.getItem("products")) || [];
       displayProducts(products.products);
     } else {
       displayProducts(products.products);
