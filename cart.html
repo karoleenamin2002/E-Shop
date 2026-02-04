@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+
+
+            <div class="logo"><span>E</span>Shop</div>
+            <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li class="log-in"><a href="login.html">Log in</a></li>
+                <li class="log-out"><a href="login.html">Log out</a></li>
+                <li><a class="user-name" href=""></a></li>
+                <li>
+                    <a href="cart.html" class="cart-box">
+                        <span class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        </span>
+                        <span class="cart-counter" id="cartCounter">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html" class="wishlist-box">
+                        <span class="wishlist-icon">
+                            <i class="fa-solid fa-heart wishlist-icon"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div style="position: relative;">
+
+
+
+    </div>
+    <!-- <a href="products.html" class="go-link">
+        <img src="back.png" style="width: 15px;">
+        <span>Continue Shopping</span> 
+    </a> -->
+    <div id="order" style="padding-bottom: 30px;">
+        <h1 id="shp">Shopping Cart</h1>
+        <div class="cart-layout">
+
+            <div id="cart-items">
+
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-value" id="subtotal">$124.9</span>
+                </div>
+
+                <div class="summary-row">
+                    <span class="summary-label">Shipping</span>
+                    <span class="summary-value free">Free</span>
+                </div>
+
+                <div class="summary-row">
+                    <span class="summary-label">Tax</span>
+                    <span class="summary-value" id="tax">$12.49</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">$112.41</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+                <button class="continue-btn" onclick="window.location.href='products.html'">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+        <div class="container">
+            <div class="footer-text">
+                <p class="">Ready to Start Shopping?</p>
+                <p class="">Explore our full collection of premium products</p>
+                <button class="view-products"><a href="products.html">View All Products</a></button>
+    
+            </div>
+        </div>
+    </footer> -->
+    <script src="./Javascript/cart.js"></script>
+</body>
+
+</html>

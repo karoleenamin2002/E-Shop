@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./css/ProductDetails.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+    
+    
+            <div class="logo"><span>E</span>Shop</div>
+            <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li class="log-in"><a href="login.html">Log in</a></li>
+                <li class="log-out"><a href="login.html">Log out</a></li>
+                <li><a class="user-name"></a></li>
+                <li>
+                    <a href="cart.html" class="cart-box">
+                        <span class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        </span>
+                        <span class="cart-counter" id="cartCounter">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html" class="wishlist-box">
+                        <span class="wishlist-icon"><i class="fa-solid fa-heart wishlist-icon"></i></span>
+                    </a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div style="position: relative;">
+
+
+
+    </div>
+    <div class="container1">
+        <div id="mainImg">
+
+        </div>
+
+        <div>
+            <div id="first" style=" display: flex ;gap: 20px;">
+
+            </div>
+            <div id="price"></div>
+
+            <div class="section-title">Description</div>
+            <p id="des"></p>
+
+            <div class="buttons">
+                <div onclick="cartclick()" id="addCart" class="btn-primary">🛒 Add to Cart</div>
+                <a href="cart.html"><button class="btn-outline">View Cart</button></a>
+            </div>
+
+            <div class="details">
+                <h3>Product Details</h3>
+                <div><span>Category</span><span id="cat"></span></div>
+                <div><span>Rating</span><span id="rate"></span></div>
+                <div><span>Product ID</span><span id="pId"></span></div>
+                <div><span>Availability</span><span style="color: green;">In Stock</span></div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="./Javascript/ProductDetails.js">
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/signUp.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+
+  </head>
+
+  <body>
+    <nav>
+        <div class="container">
+            
+
+                <div class="logo"><span>E</span>Shop</div>
+                <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li class="log-in"><a href="login.html">Log in</a></li>
+                <li>
+                        <a href="cart.html" class="cart-box">
+                         <span class="cart-icon">
+                             <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        </span>
+                        <span class="cart-counter">0</span>
+                    </a>
+                </li>
+                          <li>
+            <a href="wishlist.html" class="wishlist-box">
+                <span class="wishlist-icon"><i class="fa-solid fa-heart wishlist-icon"></i></span>
+            </a>
+          </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="sign-up-container">
+      <h2>Create Account</h2>
+      <p>Sign up to start shopping</p>
+      <div id="accountError" class="error"></div>
+
+      <form id="registerForm" onsubmit="return validateForm();">
+        <input type="text" id="fullname" placeholder="username" />
+        <div id="nameError" class="error"></div>
+
+        <input type="email" id="email" placeholder="Email" />
+        <div id="emailError" class="error"></div>
+
+        <input type="password" id="password" placeholder="Password" />
+        <div id="passwordError" class="error"></div>
+
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+        />
+        <div id="confirmError" class="error"></div>
+
+        <div class="terms">
+          <input type="checkbox" id="agree" />
+          <span>
+            I agree to the
+            <a href="terms.html" target="_blank">terms and conditions</a>
+          </span>
+        </div>
+        <div id="termsError" class="error"></div>
+
+        <input type="submit" value="Register" />
+        <div class="log">
+          you already have an account ? <a href="login.html">log in</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="./Javascript/signUp.js">
+      
+    </script>
+  </body>
+</html>

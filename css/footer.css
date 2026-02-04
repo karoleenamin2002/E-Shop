@@ -1,0 +1,42 @@
+footer {
+    padding: 40px;
+    background-color: #242323;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-text p:nth-child(1) {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer-text p:nth-child(2) {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-text .view-products:hover {
+    background-color: #000;
+}
+
+.view-products {
+    text-decoration: none;
+    outline: 0;
+    color: #fff;
+    background-color: #2ecc71;
+    padding: 15px 17px;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s linear;
+}
