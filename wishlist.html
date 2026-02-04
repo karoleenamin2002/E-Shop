@@ -1,57 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/wishlist.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
 
-<head>
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="./css/wishlist.css">
-    <link rel="stylesheet" href="./css/footer.css">
-
-
-</head>
-
-<body>
+  <body>
     <nav>
-        <div class="container">
-    
-    
-            <div class="logo"><span>E</span>Shop</div>
-            <ul class="nav-list">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li class="log-in"><a href="login.html">Log in</a></li>
-                <li class="log-out"><a href="login.html">Log out</a></li>
-                 <li><a class="user-name" href=""></a></li>
-                <li>
-                    <a href="cart.html" class="cart-box">
-                        <span class="cart-icon">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
-                        </span>
-                        <span class="cart-counter" id="cartCounter">0</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="wishlist.html" class="wishlist-box">
-                        <span class="wishlist-icon"><i class="fa-solid fa-heart wishlist-icon"></i></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="container">
+        <div class="logo"><span>E</span>Shop</div>
+        <ul class="nav-list">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li class="log-in"><a href="login.html">Log in</a></li>
+          <li class="log-out"><a href="login.html">Log out</a></li>
+          <li><a class="user-name" href=""></a></li>
+          <li>
+            <a href="cart.html" class="cart-box">
+              <span class="cart-icon">
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
+              </span>
+              <span class="cart-counter" id="cartCounter">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="wishlist.html" class="wishlist-box">
+              <span class="wishlist-icon"
+                ><i class="fa-solid fa-heart wishlist-icon"></i
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div id="order" style="height: 600px">
-    <h1 id="shp">Wish List</h1>
+      <h1 id="shp">Wish List</h1>
 
-    <div style="position: relative;">
-        
+      <div style="position: relative">
         <div class="layout">
-            <div id="wish-items">
-
-            </div>
+          <div id="wish-items"></div>
         </div>
-
+      </div>
     </div>
-    </div>
-        <!-- <footer>
+    <!-- <footer>
             <div class="container">
                 <div class="footer-text">
                     <p class="">Ready to Start Shopping?</p>
@@ -61,7 +54,6 @@
                 </div>
             </div>
         </footer> -->
-    <script src="./Javascript/wishlist.js"></script>
-</body>
-
+    <script src="Javascript/wishlist.js"></script>
+  </body>
 </html>
