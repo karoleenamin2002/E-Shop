@@ -21,7 +21,7 @@ let categoriesImages = [
     "./images/groceries.jpg"]
 var requestData = []
 var productsData = []
-var products = JSON.parse(localStorage.getItem("products"))
+var products = JSON.parse(localStorage.getItem("products"))||[]
 var categories = JSON.parse(localStorage.getItem("categories"))
 var counter = JSON.parse(localStorage.getItem("counter")) || 0
 var userName = localStorage.getItem("UserName")
