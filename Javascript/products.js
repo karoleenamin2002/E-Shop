@@ -11,7 +11,7 @@ if (loggedIn) {
   localStorage.setItem("counter", 0);
   localStorage.setItem("LoggedIn", false);
   localStorage.setItem("UserName", "user");
-  products = localStorage.getItem("products");
+  products = localStorage.getItem("products")||[];
 
   for (let i = 1; i <= products.length; i++) {
     localStorage.setItem(i, 0);
